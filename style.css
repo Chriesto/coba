@@ -1,0 +1,624 @@
+/* =========================
+   GENERAL
+========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #4a3b42;
+    background-color: #fff8fa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 90%;
+    max-width: 1100px;
+
+    padding: 15px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: rgba(255, 255, 255, 0.9);
+
+    border-radius: 50px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: #4a3b42;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.nav-menu a:hover {
+    color: #e88ba3;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 20% 20%, #ffe2ea 0, transparent 25%),
+        radial-gradient(circle at 80% 70%, #fbddea 0, transparent 25%),
+        #fff8fa;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 30px;
+}
+
+.small-title {
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    margin: 20px 0;
+
+    font-size: clamp(55px, 10vw, 110px);
+
+    line-height: 0.9;
+
+    font-family: Georgia, serif;
+}
+
+.hero h1 span {
+    color: #e88ba3;
+    font-size: 0.6em;
+}
+
+.quote {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    color: white;
+    background-color: #e88ba3;
+
+    border-radius: 50px;
+
+    border: none;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(232, 139, 163, 0.3);
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.heart {
+    position: absolute;
+
+    font-size: 40px;
+
+    color: #efb0c0;
+
+    animation: floating 4s ease-in-out infinite;
+}
+
+.heart-1 {
+    top: 25%;
+    left: 15%;
+}
+
+.heart-2 {
+    top: 65%;
+    right: 15%;
+
+    animation-delay: 1s;
+}
+
+.heart-3 {
+    bottom: 15%;
+    left: 25%;
+
+    animation-delay: 2s;
+}
+
+@keyframes floating {
+
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(10deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+    padding: 110px 8%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.section-label {
+    margin-bottom: 10px;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+
+    color: #e88ba3;
+}
+
+.section h2 {
+    margin-top: 5px;
+
+    font-family: Georgia, serif;
+
+    font-size: 45px;
+}
+
+.section-description {
+    color: #8b7b82;
+}
+
+
+/* =========================
+   OUR STORY
+========================= */
+
+.story-container {
+    margin-top: 60px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.photo-card {
+    padding: 15px;
+
+    background-color: white;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    transform: rotate(-3deg);
+
+    border-radius: 4px;
+}
+
+.main-photo img {
+    width: 100%;
+    height: 400px;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 2px;
+}
+
+.photo-caption {
+    padding: 14px 8px 4px;
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    text-align: center;
+}
+
+.story-text {
+    text-align: left;
+}
+
+.story-text h3 {
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+}
+
+.story-text p {
+    color: #77686f;
+
+    line-height: 1.8;
+}
+
+.mini-box {
+    margin-top: 25px;
+
+    padding: 18px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================
+   MEMORIES
+========================= */
+
+.memories-section {
+    max-width: 1300px;
+}
+
+.gallery {
+    margin-top: 50px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.memory-card {
+    padding: 15px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    text-align: left;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+}
+
+.memory-card:hover {
+    transform: translateY(-8px);
+}
+
+.memory-photo {
+    height: 230px;
+
+    overflow: hidden;
+
+    background-color: #ffe8ef;
+
+    border-radius: 10px;
+}
+
+.memory-photo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: 0.4s;
+}
+
+.memory-card:hover .memory-photo img {
+    transform: scale(1.05);
+}
+
+.memory-card h3 {
+    margin-bottom: 5px;
+}
+
+.memory-card p {
+    margin-top: 5px;
+
+    color: #8b7b82;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   LIKES
+========================= */
+
+.likes {
+    margin-top: 50px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.like-card {
+    padding: 35px;
+
+    background-color: white;
+
+    border: 1px solid #f4dbe2;
+
+    border-radius: 20px;
+
+    text-align: left;
+
+    transition: 0.3s;
+}
+
+.like-card:hover {
+    transform: translateY(-5px);
+}
+
+.like-card span {
+    color: #e88ba3;
+
+    font-weight: bold;
+}
+
+.like-card h3 {
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+}
+
+.like-card p {
+    color: #8b7b82;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter-section {
+    padding: 120px 20px;
+
+    background-color: #fce9ef;
+
+    text-align: center;
+}
+
+.letter-card {
+    max-width: 650px;
+
+    margin: auto;
+
+    padding: 60px 40px;
+
+    background-color: white;
+
+    border-radius: 25px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.envelope {
+    font-size: 55px;
+
+    margin-bottom: 20px;
+}
+
+.letter-text {
+    margin: 30px auto;
+
+    max-width: 500px;
+
+    line-height: 1.8;
+
+    color: #77686f;
+}
+
+.secret-message {
+    display: none;
+
+    margin-top: 25px;
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    color: #e47e99;
+}
+
+.secret-message.show {
+    display: block;
+
+    animation: appear 0.6s ease;
+}
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 35px;
+
+    text-align: center;
+
+    background-color: #4a3b42;
+
+    color: white;
+
+    font-size: 13px;
+}
+
+footer p {
+    margin: 7px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .nav-menu {
+        gap: 12px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .likes {
+        grid-template-columns: 1fr;
+    }
+
+    .story-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 12px 18px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .quote {
+        font-size: 17px;
+    }
+
+    .section {
+        padding: 80px 20px;
+    }
+
+    .section h2 {
+        font-size: 35px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .main-photo img {
+        height: 330px;
+    }
+
+    .memory-photo {
+        height: 300px;
+    }
+
+}
